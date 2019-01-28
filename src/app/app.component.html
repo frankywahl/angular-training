@@ -9,7 +9,7 @@
     <div class="row" >
       <app-license-plate
         class="col-md-4"
-        [ngClass]="isEven ? 'background' : ''"
+        [class.background]="isEven"
         *ngFor="let p of licensePlates; even as isEven"
         buttonText="Add to cart" [plate]="p">
       </app-license-plate>
