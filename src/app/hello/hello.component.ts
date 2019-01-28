@@ -14,6 +14,7 @@ export class HelloComponent {
 
   constructor() {
     this.name = 'Angular';
+    setTimeout(() => this.name = 'Franky', 5000);
   }
 
 }
