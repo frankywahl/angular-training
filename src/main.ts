@@ -9,4 +9,6 @@ if (environment.production) {
   enableProdMode();
 }
 
+// platformBrowserDynamic() tells angular that it will run in the browser
+// potentional future: platformAndroidDynamic (see nativescript.org)
 platformBrowserDynamic().bootstrapModule(AppModule);
