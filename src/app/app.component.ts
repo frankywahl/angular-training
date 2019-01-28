@@ -4,7 +4,7 @@ import {LicensePlate} from './license-plate';
 @Component({
   selector: 'app-root',
   template: `
-      <app-hello></app-hello>
+      <hello></hello>
   `
 })
 export class AppComponent {
