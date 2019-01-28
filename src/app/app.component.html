@@ -8,8 +8,8 @@
   <div class="container">
     <div class="row" >
       <app-license-plate
-        [style.backgroundColor]="isEven ? '#F5F5F5' : ''"
         class="col-md-4"
+        [ngClass]="isEven ? 'background' : ''"
         *ngFor="let p of licensePlates; even as isEven"
         buttonText="Add to cart" [plate]="p">
       </app-license-plate>

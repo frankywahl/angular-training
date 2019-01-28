@@ -4,6 +4,11 @@ import {LicensePlate} from './license-plate';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  styles: [`
+    .background {
+      background-color: #F5F5F5;
+    }
+  `]
 })
 export class AppComponent {
 
