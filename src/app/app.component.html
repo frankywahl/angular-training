@@ -7,12 +7,11 @@
 
   <div class="container">
     <div class="row" >
-      <app-license-plate #myPlate class="col-md-4" buttonText="Add to cart" [plate]="this.licensePlate"></app-license-plate>
+      <app-license-plate class="col-md-4" buttonText="Add to cart" [plate]="this.licensePlate"></app-license-plate>
     </div>
   </div>
 </main>
 
 <footer class="container">
-  {{ myPlate.plate.title }}
   <p>&copy; License Plate Store 2018</p>
 </footer>
