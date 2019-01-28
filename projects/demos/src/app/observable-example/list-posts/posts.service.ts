@@ -1,0 +1,20 @@
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Post} from './post';
+import {Observable} from 'rxjs';
+import {webSocket, WebSocketSubject} from 'rxjs/webSocket';
+
+@Injectable()
+export class PostsService {
+
+  // We use a websocket to receive a stream of data from the server
+  postsWebSocket: WebSocketSubject<Post>;
+
+  constructor(private http: HttpClient) {
+    this.postsWebSocket = webSocket('ws://localhost:8000');
+  }
+
+  getPosts(): Observable<Post> {
+    return this.postsWebSocket.asObservable();
+  }
+}
