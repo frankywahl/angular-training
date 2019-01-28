@@ -6,10 +6,7 @@ import { Component } from '@angular/core';
     <div>
       <h2>Hello {{name}}</h2>
     </div>
-  `,
-  styles: [
-    `h2 { color: red; }`
-  ]
+  `
 })
 export class HelloComponent {
 
