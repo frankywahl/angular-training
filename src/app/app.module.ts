@@ -23,6 +23,7 @@ import {CurrencySwitcherComponent} from './currency-switcher/currency-switcher.c
 import {EnumUtilsModule} from '../../projects/enum-utils/src/lib/enum-utils.module';
 import {TokenInterceptorService} from './token-http-interceptor.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NavigationComponent } from './navigation/navigation.component';
 //import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -33,7 +34,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginComponent,
     PopupWindowComponent, LoaderComponent, HeaderComponent,
     LoaderViewChildComponent,
-    CarouselComponent, CurrencySwitcherComponent, DashboardComponent
+    CarouselComponent, CurrencySwitcherComponent, DashboardComponent, NavigationComponent
   ],
   imports: [
     BrowserModule,
