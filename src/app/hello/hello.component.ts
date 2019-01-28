@@ -1,21 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'hello',
   template: `
     <div>
-      <h2>Hello {{firstName}}</h2>
+      <h2>Hello {{name}}</h2>
     </div>
   `
 })
 export class HelloComponent {
 
-  name: string;
-  firstName: string;
+  @Input() name: string;
 
   constructor() {
-    this.name = 'Angular';
-    this.firstName = 'John';
+    this.name = 'Default Name';
   }
 
 }

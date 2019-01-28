@@ -4,6 +4,7 @@ import {LicensePlate} from './license-plate';
 @Component({
   selector: 'app-root',
   template: `
+      <hello name="Max"></hello>
       <hello></hello>
   `
 })
