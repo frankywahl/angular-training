@@ -15,4 +15,8 @@ export class LicensePlateComponent {
   buttonText: string;
 
   constructor() { }
+
+  buttonClicked() {
+    alert(`Plate added to cart`);
+  }
 }
