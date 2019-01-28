@@ -24,6 +24,7 @@ import {EnumUtilsModule} from '../../projects/enum-utils/src/lib/enum-utils.modu
 import {TokenInterceptorService} from './token-http-interceptor.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { JumbotronComponent } from './jumbotron/jumbotron.component';
 //import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -34,7 +35,7 @@ import { NavigationComponent } from './navigation/navigation.component';
     LoginComponent,
     PopupWindowComponent, LoaderComponent, HeaderComponent,
     LoaderViewChildComponent,
-    CarouselComponent, CurrencySwitcherComponent, DashboardComponent, NavigationComponent
+    CarouselComponent, CurrencySwitcherComponent, DashboardComponent, NavigationComponent, JumbotronComponent
   ],
   imports: [
     BrowserModule,
