@@ -25,6 +25,7 @@ import {TokenInterceptorService} from './token-http-interceptor.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
+import { HighlightDirective } from './highlight.directive';
 //import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -35,7 +36,7 @@ import { JumbotronComponent } from './jumbotron/jumbotron.component';
     LoginComponent,
     PopupWindowComponent, LoaderComponent, HeaderComponent,
     LoaderViewChildComponent,
-    CarouselComponent, CurrencySwitcherComponent, DashboardComponent, NavigationComponent, JumbotronComponent
+    CarouselComponent, CurrencySwitcherComponent, DashboardComponent, NavigationComponent, JumbotronComponent, HighlightDirective
   ],
   imports: [
     BrowserModule,
