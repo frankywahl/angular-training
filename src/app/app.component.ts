@@ -12,6 +12,8 @@ import {LicensePlate} from './license-plate';
 })
 export class AppComponent {
 
+  now = new Date();
+
   // This is for lab #5
   licensePlates: LicensePlate[] = [
     {
