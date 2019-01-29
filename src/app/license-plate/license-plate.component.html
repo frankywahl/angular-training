@@ -6,14 +6,14 @@
 <p>{{plate.description}}</p>
 <div>
   <h2 class="float-left">{{plate.price | currencyRenderer:'EUR':1.2}}</h2><br />
-  <button class="btn btn-primary float-right" role="button" (click)="buttonClicked()">
+  <button class="btn btn-primary float-right" role="button" (click)="popup.isOpen = true">
     {{buttonText}}
   </button>
 </div>
 
 <app-popup-window
+  #popup
   title="Plate added to cart"
-  (onClose)="handleClosePopup($event)"
 >
   <p>Thanks for shopping with us!</p>
   <p>You have added {{ this.plate.title }}</p>

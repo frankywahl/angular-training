@@ -8,8 +8,6 @@ import { PopupWindowComponent } from 'app/popup-window/popup-window.component';
   styleUrls: ['./license-plate.component.css']
 })
 export class LicensePlateComponent {
-  @ViewChild(PopupWindowComponent) popup;
-
   @Input()
   plate: LicensePlate;
 
@@ -17,12 +15,4 @@ export class LicensePlateComponent {
   buttonText: string;
 
   constructor() { }
-
-  buttonClicked() {
-    this.popup.isOpen = true;
-  }
-
-  handleClosePopup(event) {
-    console.log(event);
-  }
 }
