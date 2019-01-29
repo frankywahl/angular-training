@@ -1,5 +1,6 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
 import {LicensePlate} from '../license-plate';
+import { PopupWindowComponent } from 'app/popup-window/popup-window.component';
 
 @Component({
   selector: 'app-license-plate',
@@ -7,7 +8,7 @@ import {LicensePlate} from '../license-plate';
   styleUrls: ['./license-plate.component.css']
 })
 export class LicensePlateComponent {
-  showPopup = false;
+  @ViewChild(PopupWindowComponent) popup;
 
   @Input()
   plate: LicensePlate;
@@ -18,11 +19,10 @@ export class LicensePlateComponent {
   constructor() { }
 
   buttonClicked() {
-    this.showPopup = true;
+    this.popup.isOpen = true;
   }
 
   handleClosePopup(event) {
-    this.showPopup = false;
     console.log(event);
   }
 }
