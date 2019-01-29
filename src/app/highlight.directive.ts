@@ -1,4 +1,4 @@
-import { Directive, HostBinding, HostListener } from '@angular/core';
+import { Directive, HostBinding, HostListener, Input } from '@angular/core';
 import { MockNgModuleResolver } from '@angular/compiler/testing';
 
 @Directive({
@@ -10,10 +10,12 @@ import { MockNgModuleResolver } from '@angular/compiler/testing';
   }
 })
 export class HighlightDirective {
+
+  @Input('appHighlight') color = '#F5F5F5';
   bgColor;
 
   mouseOver() {
-    this.bgColor = '#F5F5F5';
+    this.bgColor = this.color;
   }
 
   mouseOut() {
