@@ -1,7 +1,7 @@
 import { LicensePlateService } from './license-plate.service';
-import { Component, OnDestroy } from '@angular/core';
+import { Component } from '@angular/core';
 import {LicensePlate} from './license-plate';
-import { Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,21 +12,11 @@ import { Subscription } from 'rxjs';
     }
   `]
 })
-export class AppComponent implements OnDestroy {
+export class AppComponent {
   now = new Date();
-  licensePlates: LicensePlate[];
-
-  private lpSubscription: Subscription;
+  licensePlates$: Observable<LicensePlate[]>;
 
   constructor(lp: LicensePlateService) {
-    this.lpSubscription = lp.getList().subscribe(
-      (plates) => this.licensePlates = plates,
-      (error) => console.log('Error', error),
-      () => console.log('Done')
-    );
-  }
-
-  ngOnDestroy() {
-    this.lpSubscription.unsubscribe();
+    this.licensePlates$ = lp.getList();
   }
 }

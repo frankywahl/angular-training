@@ -10,7 +10,7 @@
       <app-license-plate
         class="col-md-4"
         appHighlight="#F5F5F5"
-        *ngFor="let p of licensePlates"
+        *ngFor="let p of licensePlates$ | async"
         buttonText="Add to cart" [plate]="p">
       </app-license-plate>
     </div>
