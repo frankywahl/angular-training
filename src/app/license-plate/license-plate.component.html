@@ -10,3 +10,10 @@
     {{buttonText}}
   </button>
 </div>
+
+<app-popup-window
+  [isOpen]="showPopup"
+  title="Plate added to cart"
+  (onClose)="handleClosePopup($event)"
+>
+</app-popup-window>

@@ -7,6 +7,7 @@ import {LicensePlate} from '../license-plate';
   styleUrls: ['./license-plate.component.css']
 })
 export class LicensePlateComponent {
+  showPopup = false;
 
   @Input()
   plate: LicensePlate;
@@ -17,6 +18,11 @@ export class LicensePlateComponent {
   constructor() { }
 
   buttonClicked() {
-    alert(`Plate added to cart`);
+    this.showPopup = true;
+  }
+
+  handleClosePopup(event) {
+    this.showPopup = false;
+    console.log(event);
   }
 }
