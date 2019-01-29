@@ -16,6 +16,7 @@ export class AppComponent {
   licensePlates: LicensePlate[];
 
   constructor(lp: LicensePlateService) {
-    this.licensePlates = lp.getList();
+    lp.getList()
+      .subscribe((plates) => this.licensePlates = plates);
   }
 }

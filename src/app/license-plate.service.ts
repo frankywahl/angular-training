@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { LicensePlate } from './license-plate';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -90,7 +91,7 @@ export class LicensePlateService {
 
   constructor() { }
 
-  getList(): LicensePlate[] {
-    return this.plates;
+  getList(): Observable<LicensePlate[]> {
+    return of(this.plates);
   }
 }
