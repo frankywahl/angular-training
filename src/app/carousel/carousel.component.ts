@@ -9,7 +9,9 @@ export class CarouselComponent implements OnInit {
 
   index = 0;
 
-  constructor() { }
+  constructor() {
+    setInterval(() => this.next(), 5000);
+  }
 
   ngOnInit() {
   }
