@@ -26,6 +26,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { HighlightDirective } from './highlight.directive';
+import { CurrencyRendererPipe } from './currency-renderer.pipe';
 //import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -36,7 +37,7 @@ import { HighlightDirective } from './highlight.directive';
     LoginComponent,
     PopupWindowComponent, LoaderComponent, HeaderComponent,
     LoaderViewChildComponent,
-    CarouselComponent, CurrencySwitcherComponent, DashboardComponent, NavigationComponent, JumbotronComponent, HighlightDirective
+    CarouselComponent, CurrencySwitcherComponent, DashboardComponent, NavigationComponent, JumbotronComponent, HighlightDirective, CurrencyRendererPipe
   ],
   imports: [
     BrowserModule,
