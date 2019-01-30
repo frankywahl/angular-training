@@ -17,6 +17,10 @@ const appRoutes: Routes = [
     path: 'login', component: LoginComponent,
   },
   {
+    path: 'admin',
+    loadChildren: 'app/admin/admin.module#AdminModule',
+  },
+  {
     path: 'checkout', component: CheckoutViewComponent, canActivate: [AuthGuard],
   }
 ];
