@@ -1,9 +1,10 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, ChangeDetectionStrategy} from '@angular/core';
 
 @Component({
   selector: 'app-popup-window',
   templateUrl: './popup-window.component.html',
-  styleUrls: ['./popup-window.component.css']
+  styleUrls: ['./popup-window.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PopupWindowComponent implements OnInit {
 
