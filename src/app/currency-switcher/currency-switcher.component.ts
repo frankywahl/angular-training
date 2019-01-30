@@ -14,17 +14,7 @@ export class CurrencySwitcherComponent {
   constructor(public currencyService: CurrencyService) { }
 
   changeCurrency(currency: CurrencyCode) {
-    let rate = 1.0;
-    if (currency === 'EUR') {
-      rate = 1.7;
-    } else if (currency === 'GBP') {
-      rate = 1.2;
-    }
-
-    this.currencyService.current = {
-      code: currency,
-      rate: rate,
-    };
+    this.currencyService.setCurrent(currency);
     this.showItems = false;
   }
 }
