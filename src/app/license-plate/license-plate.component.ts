@@ -1,3 +1,4 @@
+import { CurrencyService } from './../currency.service';
 import {Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
 import {LicensePlate} from '../license-plate';
 import { PopupWindowComponent } from 'app/popup-window/popup-window.component';
@@ -8,11 +9,12 @@ import { PopupWindowComponent } from 'app/popup-window/popup-window.component';
   styleUrls: ['./license-plate.component.css']
 })
 export class LicensePlateComponent {
+
   @Input()
   plate: LicensePlate;
 
   @Input()
   buttonText: string;
 
-  constructor() { }
+  constructor(public currencyService: CurrencyService) {}
 }

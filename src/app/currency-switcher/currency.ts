@@ -1,1 +1,5 @@
-export type Currency = 'USD' | 'GBP' | 'EUR';
+export type CurrencyCode = 'USD' | 'GBP' | 'EUR';
+export interface Currency {
+  code: CurrencyCode,
+  rate: number,
+};
