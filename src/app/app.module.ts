@@ -1,3 +1,5 @@
+import { CheckoutViewComponent } from './checkout-view/checkout-view.component';
+import { CartViewComponent } from './cart-view/cart-view.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -27,6 +29,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { HighlightDirective } from './highlight.directive';
 import { CurrencyRendererPipe } from './currency-renderer.pipe';
+import { StoreViewComponent } from './store-view/store-view.component';
+import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
 //import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -37,7 +41,8 @@ import { CurrencyRendererPipe } from './currency-renderer.pipe';
     LoginComponent,
     PopupWindowComponent, LoaderComponent, HeaderComponent,
     LoaderViewChildComponent,
-    CarouselComponent, CurrencySwitcherComponent, DashboardComponent, NavigationComponent, JumbotronComponent, HighlightDirective, CurrencyRendererPipe
+    CartViewComponent, CheckoutViewComponent, CheckoutFormComponent,
+    CarouselComponent, CurrencySwitcherComponent, DashboardComponent, NavigationComponent, JumbotronComponent, HighlightDirective, CurrencyRendererPipe, StoreViewComponent
   ],
   imports: [
     BrowserModule,

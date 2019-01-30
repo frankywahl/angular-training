@@ -1,0 +1,17 @@
+<app-carousel></app-carousel>
+
+<div class="container">
+  <div class="row">
+    <app-license-plate class="col-md-4" (onButtonClicked)="addToCart($event)" appHighlight="#F5F5F5" *ngFor="let p of licensePlates$ | async"
+      buttonText="Add to cart" [plate]="p">
+    </app-license-plate>
+  </div>
+</div>
+
+<app-popup-window
+  title="Item added to cart"
+  [isOpen]="showPopup"
+  (onClose)="handleClosePopup($event)"
+>
+  Thanks for shopping with us!
+</app-popup-window>
