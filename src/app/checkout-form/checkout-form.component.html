@@ -27,13 +27,20 @@
   <br>
   <div class="row">
     <div class="col-lg-6">
+      <div *ngIf="zip.dirty && zip.invalid" class="alert alert-danger">Zip is required and needs to be 5+ digits<br></div>
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Zip" name="zip" ngModel>
+        <input type="text" #zip="ngModel" class="form-control" placeholder="Zip" name="zip" ngModel required pattern="[0-9]{5,}">
       </div>
     </div>
     <div class="col-lg-6">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="State" name="state" ngModel>
+      <div class="form-group">
+        <select [(ngModel)]="defaultState.abbreviation" ngModel name="state" class="form-control">
+          <option
+            *ngFor="let state of states;"
+            [value]="state.abbreviation"
+            style="width: 100px;"
+          >{{ state.name }}</option>
+        </select>
       </div>
     </div>
   </div>
@@ -52,3 +59,10 @@
   <br>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+<app-popup-window
+  title="Post Submitted"
+  [isOpen]="showPopup"
+  (onClose)="handleClosePopup($event)"
+>
+  Post sent correctly
+</app-popup-window>
