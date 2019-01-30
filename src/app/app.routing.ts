@@ -3,6 +3,8 @@ import { CartViewComponent } from './cart-view/cart-view.component';
 import { StoreViewComponent } from './store-view/store-view.component';
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './router/auth-guard-service';
+import { LoginComponent } from './router/login/login.component';
 
 const appRoutes: Routes = [
   {
@@ -12,7 +14,10 @@ const appRoutes: Routes = [
     path: 'cart', component: CartViewComponent,
   },
   {
-    path: 'checkout', component: CheckoutViewComponent,
+    path: 'login', component: LoginComponent,
+  },
+  {
+    path: 'checkout', component: CheckoutViewComponent, canActivate: [AuthGuard],
   }
 ];
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
