@@ -9,6 +9,7 @@
     <div class="row" >
       <app-license-plate
         class="col-md-4"
+        (onButtonClicked)="addToCart($event)"
         appHighlight="#F5F5F5"
         *ngFor="let p of licensePlates$ | async"
         buttonText="Add to cart" [plate]="p">
@@ -20,3 +21,11 @@
 <footer class="container">
   <p>&copy; License Plate Store {{ now | date:'yyyy' }}</p>
 </footer>
+
+<app-popup-window
+  title="Item added to cart"
+  [isOpen]="showPopup"
+  (onClose)="handleClosePopup($event)"
+>
+  Thanks for shopping with us!
+</app-popup-window>

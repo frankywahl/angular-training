@@ -16,5 +16,11 @@ export class LicensePlateComponent {
   @Input()
   buttonText: string;
 
+  @Output() onButtonClicked = new EventEmitter<LicensePlate>();
+
   constructor(public currencyService: CurrencyService) {}
+
+  handleClick() {
+    this.onButtonClicked.emit(this.plate);
+  }
 }
