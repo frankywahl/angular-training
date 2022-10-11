@@ -36,7 +36,7 @@
     "document-register-element": "1.8.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.10.5",
+    "@angular-devkit/build-angular": "^14.2.5",
     "@angular-devkit/build-ng-packagr": "^0.10.5",
     "@angular/cli": "^7.2.0",
     "@angular/compiler-cli": "^7.2.0",
@@ -57,7 +57,7 @@
     "karma-jasmine": "^1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
     "karma-phantomjs-launcher": "^1.0.4",
-    "ng-packagr": "^4.4.0",
+    "ng-packagr": "^14.2.1",
     "nodejs-websocket": "^1.7.2",
     "protractor": "^5.4.4",
     "ts-node": "3.3.0",
