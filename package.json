@@ -57,7 +57,7 @@
     "karma-jasmine": "^1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
     "karma-phantomjs-launcher": "^1.0.4",
-    "ng-packagr": "^14.2.1",
+    "ng-packagr": "^18.2.1",
     "nodejs-websocket": "^1.7.2",
     "protractor": "^7.0.0",
     "ts-node": "3.3.0",
